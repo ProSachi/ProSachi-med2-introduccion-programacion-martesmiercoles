@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="desarrollo-1200w.jpg"
+
+        alt="Un desarrollador escribiendo código en una pantalla con múltiples ventanas abiertas." 
+        srcset="desarrollo-300w.jpg 300w, 
+            desarrollo-800w.jpg 800w, 
+            desarrollo-1200w.jpg 1200w" 
+
+        sizes="(max-width: 600px) 100vw, 
+            (max-width: 1200px) 80vw,
+            600px">
+
+<!-- srcset: Le dice al navegador: "Aquí tienes una lista de imágenes y su ancho real (300w, 800w, 1200w). Elige la mejor."
+sizes: Le dice al navegador: "Cuando el viewport sea menor a 600px, la imagen ocupará el 100% del ancho del viewport (100vw). Cuando esté entre 600px y 1200px, ocupará el 80%. De lo contrario, tendrá un ancho fijo de 600px."
+src: Actúa como fallback (alternativa) para navegadores muy antiguos y es la imagen por defecto si srcset no funciona
+ -->
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.completada {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.btn-eliminar {
+  margin-left: 15px;
+  cursor: pointer;
+}
