@@ -1,4 +1,5 @@
 Semana 2
+
 Introducción a HTML5
 • Que es HTML, editores de codigo, Editor para HTML
 • Etiquetas estructurales sitio HTML5:  doctype, html, head, meta, title, body
@@ -6,6 +7,7 @@ Introducción a HTML5
 • Etiquetas de contenido: h1-h6, article, p, listas, enlaces, etc.
 
 Semana 3  
+
 Git básico 1,  
 -- que es git, 
 --- crear un repositorio, 
@@ -15,6 +17,7 @@ Git básico 1,
 
 
 Semana 4
+
 Tablas y etiquetas multimedia
 • Etiquetas de imagen
 • Etiquetas video
@@ -26,6 +29,7 @@ Tablas y etiquetas multimedia
 • colspan,rowspan entre otros 
 
 Semana 5
+
 Etiquetas de formulario
 • form, input, label, button
 • select, textarea
