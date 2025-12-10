@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Definimos la base: 1rem = 16px (Valor por defecto del navegador) */
+html {
+    font-size: 16px;
+}
+
+/* Estilos generales para el cuerpo (opcional, para que se vea mejor) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    /* Fondo gris para ver mejor la tarjeta blanca */
+    padding-top: 20px;
+}
+
+/* 2. COMPONENTE CARD */
+.tarjeta {
+    /* Ancho fijo para demo. 
+               Si quitas el box-sizing de arriba, este ancho crecería a 348px aprox */
+    width: 300px;
+
+    /* Espaciado Interno: 1.5rem = 24px */
+    /* Este espacio empuja el contenido hacia adentro */
+    padding: 1.5rem;
+
+    /* Borde */
+    border: 2px solid #333;
+
+    /* Curvatura */
+    border-radius: 0.5rem;
+    /* 8px */
+
+    /* Espaciado Externo para separar de otras tarjetas */
+    /* 2rem (32px) arriba/abajo, Auto (centrado) a los lados */
+    margin: 2rem auto;
+
+    background-color: #f9f9f9;
+}
+
+.tarjeta h2 {
+    font-size: 1.5rem;
+    /* 24px */
+    margin-bottom: 1rem;
+    /* Separación del título al párrafo */
+    color: #2c3e50;
+}
+
+.tarjeta p {
+    line-height: 1.5;
+    /* Altura de línea para mejorar lectura */
+    color: #555;
+}

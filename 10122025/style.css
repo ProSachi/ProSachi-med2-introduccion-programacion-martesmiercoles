@@ -1,0 +1,44 @@
+* {
+  margin: 0 ;
+}
+
+.form-register {
+  background-color: coral;
+}
+
+.section-1 {
+  background-color: blue;
+  height: 500px;
+}
+
+.section-2 {
+  background-color: rgb(79, 199, 43);
+  height: 50px;
+}
+
+.p-1 {
+  background-color: brown;
+}
+
+#name {
+  color: brown;
+}
+
+
+.container {
+  height: 100px;
+  background-color: aquamarine;
+  border-style: dashed;
+  margin: 5px;
+  padding: 5px;
+
+}
+
+.container2 {
+  height: 100px;
+  background-color: rgb(3, 61, 42);
+  border-style: dashed;
+  margin-left: 50px;
+  border-radius: 5px;
+
+}
