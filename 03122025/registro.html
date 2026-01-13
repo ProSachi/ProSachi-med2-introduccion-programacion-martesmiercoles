@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalendarioKui</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="/img/logo.png">
+</head>
+<body>
+    <header>
+        <h1>CalendarioKui</h1>
+        <p>Organiza tus eventos, tareas y horarios de clase de manera sencilla.</p>
+    </header>
+
+    <main>
+        
+        <section>
+
+            <h2>Ingresa tus Datos</h2>
+
+            <div>
+                <h3>Nuevo Evento</h3>
+                <form>
+                    <label for="nombre_evento">Nombre del Evento:</label>
+                    <input type="text" id="nombre_evento" required>
+
+                    <label for="fecha_evento">Fecha:</label>
+                    <input type="date" id="fecha_evento" required>
+
+                    <label for="hora_evento">Hora (opcional):</label>
+                    <input type="time" id="hora_evento">
+
+                    <button type="submit">Añadir Evento</button>
+                </form>
+            </div>
+
+            <div class="tarjeta-formulario">
+                <h3>Nueva Tarea</h3>
+                <form id="task-form">
+                    <label for="descripcion_tarea">Descripción de la Tarea:</label>
+                    <input type="text" id="descripcion_tarea" required>
+
+                    <label for="fecha_limite_tarea">Fecha Límite:</label>
+                    <input type="date" id="fecha_limite_tarea" required>
+
+                    <button type="submit">Añadir Tarea</button>
+                </form>
+            </div>
+
+            <div class="tarjeta-formulario">
+                <h3>Nuevo Horario de Clase</h3>
+                <form id="clase_formulario">
+                    <label for="nombre_materia">Materia:</label>
+                    <input type="text" id="nombre_materia" required>
+
+                    <label for="dia_clase">Día:</label>
+                    <select id="dia_clase" required>
+                        <option value="Lunes">Lunes</option>
+                        <option value="Martes">Martes</option>
+                        <option value="Miércoles">Miércoles</option>
+                        <option value="Jueves">Jueves</option>
+                        <option value="Viernes">Viernes</option>
+                        <option value="Sábado">Sábado</option>
+                        <option value="Domingo">Domingo</option>
+                    </select>
+
+                    <label for="reloj_inicio">Hora de Inicio:</label>
+                    <input type="time" id="reloj_inicio" required>
+
+                    <label for="reloj_fin">Hora de Fin:</label>
+                    <input type="time" id="reloj_fin">
+
+                    <button type="submit">Añadir Clase</button>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HawaslyPC</p>
+    </footer>
+
+    </body>
+</html>
