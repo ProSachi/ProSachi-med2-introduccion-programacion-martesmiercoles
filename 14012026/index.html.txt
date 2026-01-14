@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1: Galería Flexbox</title>
+    <style>
+        /* Reset básico */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+
+        body { padding: 20px; background-color: #f0f2f5; }
+
+        /* --- CSS DE LA SOLUCIÓN --- */
+
+        .galeria {
+            /* 1. Activamos Flexbox */
+            display: flex;
+            
+            /* 2. PERMITIMOS EL SALTO DE LÍNEA (Vital para responsividad) */
+            /* Si no ponemos esto, las tarjetas se apretujarían en una sola fila infinita */
+            flex-wrap: wrap; 
+            
+            /* 3. Espaciado entre tarjetas (vertical y horizontal) */
+            gap: 1rem; 
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+
+            /* --- LA FÓRMULA MÁGICA --- */
+            /* flex-grow: 1    -> Si sobra espacio, ESTÍRATE para llenarlo. */
+            /* flex-shrink: 1  -> Si falta espacio, ENCÓGETE para caber. */
+            /* flex-basis: 250px -> Tu tamaño ideal es 250px. */
+            flex: 1 1 250px;
+        }
+
+        .tarjeta h3 { margin-bottom: 10px; color: #333; }
+        .tarjeta p { color: #666; }
+    </style>
+</head>
+<body>
+
+    <h2>Galería Responsiva (Prueba redimensionar la ventana)</h2>
+    <br>
+
+    <div class="galeria">
+        <div class="tarjeta">
+            <h3>Producto 1</h3>
+            <p>Descripción breve del producto.</p>
+        </div>
+        <div class="tarjeta">
+            <h3>Producto 2</h3>
+            <p>Este producto tiene un poco más de texto para ver la altura.</p>
+        </div>
+        <div class="tarjeta">
+            <h3>Producto 3</h3>
+            <p>Descripción breve.</p>
+        </div>
+        <div class="tarjeta">
+            <h3>Producto 4</h3>
+            <p>Descripción breve.</p>
+        </div>
+        <div class="tarjeta">
+            <h3>Producto 5</h3>
+            <p>Descripción breve.</p>
+        </div>
+    </div>
+
+</body>
+</html>

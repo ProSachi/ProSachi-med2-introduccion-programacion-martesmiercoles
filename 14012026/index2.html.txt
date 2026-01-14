@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2: Chat Flexbox</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+        body { padding: 20px; background-color: #e5ddd5; /* Color de fondo WhatsApp */ }
+
+        /* Contenedor principal de la conversación (Simulación de columna) */
+        .pantalla-chat {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column; /* Mensajes uno debajo del otro */
+            gap: 15px;
+        }
+
+        /* --- CSS DEL MENSAJE (LA PRÁCTICA) --- */
+        .mensaje {
+            display: flex;
+            
+            /* ALINEACIÓN CLAVE: */
+            /* flex-start evita que el avatar se estire si el texto es muy alto */
+            align-items: flex-start; 
+            
+            gap: 10px;
+            max-width: 80%; /* Para que no ocupe todo el ancho */
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #bbb;
+            
+            /* PROPIEDAD VITAL: */
+            /* Evita que el círculo se aplaste si hay mucho texto al lado */
+            flex-shrink: 0; 
+        }
+
+        .texto {
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 0 15px 15px 15px; /* Borde estilo burbuja */
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            line-height: 1.4;
+        }
+
+        /* --- MODIFICADOR: MENSAJE MÍO --- */
+        .mensaje-mio {
+            /* 1. Mover todo el bloque a la derecha */
+            align-self: flex-end; 
+            
+            /* 2. Invertir el orden (Texto primero, Avatar después) */
+            flex-direction: row-reverse; 
+        }
+
+        /* Cambiamos el color y el borde de la burbuja para que parezca enviada */
+        .mensaje-mio .texto {
+            background-color: #dcf8c6; /* Verde WhatsApp */
+            border-radius: 15px 0 15px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pantalla-chat">
+        
+        <div class="mensaje">
+            <img src="https://via.placeholder.com/50" class="avatar" alt="Avatar">
+            <div class="texto">
+                Hola, ¿cómo estás? Este es un mensaje de prueba para ver cómo funciona Flexbox.
+            </div>
+        </div>
+
+        <div class="mensaje mensaje-mio">
+            <img src="https://via.placeholder.com/50/007bff/ffffff" class="avatar" alt="Yo">
+            <div class="texto">
+                ¡Hola! Todo muy bien. Acabo de invertir este mensaje usando <code>flex-direction: row-reverse</code>.
+            </div>
+        </div>
+
+        <div class="mensaje">
+            <img src="https://via.placeholder.com/50" class="avatar" alt="Avatar">
+            <div class="texto">
+                Genial. Nota cómo mi avatar se mantiene redondo y arriba, incluso si escribo mucho texto gracias a <code>align-items: flex-start</code> y <code>flex-shrink: 0</code>.
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
