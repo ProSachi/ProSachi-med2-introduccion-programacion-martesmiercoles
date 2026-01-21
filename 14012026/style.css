@@ -1,0 +1,11 @@
+.padreaside{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.section-hijo{
+    margin: 10px;
+    height: 500px;
+    background-color: rgb(235, 68, 34);
+    width:25rem;
+}

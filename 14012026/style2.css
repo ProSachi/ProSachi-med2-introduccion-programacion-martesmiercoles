@@ -1,0 +1,34 @@
+/* Centrar el contenido del header */
+.contenedor-flex-header {
+    display: flex;
+    flex-direction: column;
+    /* Apilamos el título y el nav verticalmente */
+    align-items: center;
+    /* Los centramos horizontalmente */
+    border: 2px solid gray;
+    padding: 10px;
+}
+
+/* Distribuir las tarjetas de productos */
+.contenedor-flex-productos {
+    display: flex;
+    justify-content: space-around;
+    /* Espacio uniforme alrededor de cada tarjeta */
+    margin-top: 20px;
+    border: 2px solid gray;
+    padding: 10px;
+}
+
+.tarjeta {
+    background-color: lightblue;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+
+ul {
+    width: 16rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}

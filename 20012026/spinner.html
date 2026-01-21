@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2: Loader Responsive</title>
+    <style>
+        /* Estilos generales de presentación (para centrar todo) */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura completa de la pantalla */
+            background-color: #222; /* Fondo oscuro para que resalte */
+            font-family: sans-serif;
+            color: white;
+        }
+
+        h2 { margin-bottom: 20px; font-weight: normal; }
+
+        /* --- SOLUCIÓN DEL EJERCICIO --- */
+
+        /* 1. DEFINICIÓN DE LA ANIMACIÓN (@keyframes) */
+        /* Creamos la regla "girar" que va de 0 a 360 grados */
+        @keyframes girar {
+            0% { 
+                transform: rotate(0deg); 
+            }
+            100% { 
+                transform: rotate(360deg); 
+            }
+        }
+
+        /* 2. ESTILOS BASE (Mobile First - Pantallas Pequeñas) */
+        .loader {
+            /* Hacemos un círculo */
+            border-radius: 50%;
+            
+            /* Tamaño pequeño para móvil (Requisito) */
+            width: 30px;
+            height: 30px;
+            
+            /* EL BORDE (El truco del spinner) */
+            /* 3 lados son gris claro transparente */
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            /* 1 lado (el superior) es del color principal */
+            border-top: 4px solid #3498db; /* Azul brillante */
+            
+            /* LA ANIMACIÓN */
+            /* nombre | duración | función-tiempo | repetición */
+            /* linear: velocidad constante (sin acelerar ni frenar) */
+            animation: girar 1s linear infinite;
+        }
+
+        /* 3. RESPONSIVIDAD (@media) */
+        /* Esta regla se activa SOLO si la pantalla mide más de 768px */
+        @media (min-width: 768px) {
+            .loader {
+                /* Tamaño grande para escritorio (Requisito) */
+                width: 80px;
+                height: 80px;
+                
+                /* Hacemos el borde más grueso para que se vea bien en grande */
+                border-width: 10px;
+                
+                /* Opcional: Cambiamos el color en escritorio para evidenciar el cambio */
+                border-top-color: #e74c3c; /* Rojo en escritorio */
+            }
+
+            /* Cambiamos el texto de ayuda solo para demostrar la media query */
+            .info::after {
+                content: " (Vista Escritorio detectada)";
+                color: #e74c3c;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2 class="info">Cargando Sistema...</h2>
+    
+    <div class="loader"></div>
+
+    <br>
+    <p style="color: #aaa; font-size: 0.9rem;">
+        Redimensiona la ventana para ver el cambio de tamaño y color.
+    </p>
+
+</body>
+</html>

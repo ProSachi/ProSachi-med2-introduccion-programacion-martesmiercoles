@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader Animado (Sin Responsive)</title>
+    <style>
+        /* Centrado para que se vea bien en el ejemplo */
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            flex-direction: column;
+            font-family: sans-serif;
+        }
+
+        /* 1. CREAMOS LA ANIMACIÓN */
+        /* Definimos los fotogramas: empieza en 0 grados y termina en 360 */
+        @keyframes rotacion {
+            0% { 
+                transform: rotate(0deg); 
+            }
+            100% { 
+                transform: rotate(360deg); 
+            }
+        }
+
+        /* 2. DISEÑAMOS EL OBJETO */
+        .loader {
+            /* Hacemos un círculo perfecto */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            
+            /* TRUCO VISUAL: */
+            /* Borde base (gris claro) */
+            border: 5px solid #ddd;
+            
+            /* Borde superior (azul) - Este es el que parecerá moverse */
+            border-top: 5px solid #3498db;
+            
+            /* APLICAMOS LA ANIMACIÓN */
+            /* nombre | duración | ritmo | repetición */
+            animation: rotacion 1s linear infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader"></div>
+    <p style="color: #666; margin-top: 20px;">Cargando...</p>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* 1. Ocultamos el checkbox feo por defecto */
+#interruptor {
+    display: none;
+}
+
+/* 2. Dibujamos el carril del botón (El label) */
+.boton-deslizante {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Animación suave de color */
+}
+
+/* 3. Dibujamos el círculo (Seudoelemento ::after) */
+.boton-deslizante::after {
+    content: ''; /* Obligatorio para seudoelementos */
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s; /* Animación suave de movimiento */
+}
+
+/* 4. LÓGICA DE ESTADOS (:checked) */
+
+/* Cuando el input está checked, cambia el fondo del label vecino (+) */
+#interruptor:checked + .boton-deslizante {
+    background-color: #4cd964; /* Verde */
+}
+
+/* Cuando el input está checked, mueve el círculo (::after) del label */
+#interruptor:checked + .boton-deslizante::after {
+    transform: translateX(30px);
+}
+
+/* Lógica para texto (opcional, usa combinador general ~) */
+#interruptor:checked ~ p .texto-estado::after {
+    content: "Encendido"; /* Truco: cambiar contenido con CSS */
+    color: green;
+}
