@@ -35,3 +35,12 @@ Etiquetas de formulario
 • select, textarea
 • atributos de las etiquetas de formulario
 • type, name, value, min, max entre otros
+
+Semana 15
+
+SeudoClases y SeudoElementos: 
+--hover, ---focus, ---checked, ---nth-child, ----nth-of-type 
+Reglas @css: 
+---@media, ---@keyframes, ----@import, ---@font-fase
+
+
